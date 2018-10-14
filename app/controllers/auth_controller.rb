@@ -2,6 +2,7 @@ class AuthController < ApplicationController
   skip_before_action :authenticate, only: [:login]
 
   def login
+    debugger
     user = User.find_by(email: params[:email])
     if user && user.authenticate(params[:password])
       token = generate_token(user)
