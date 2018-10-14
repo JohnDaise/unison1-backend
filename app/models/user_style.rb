@@ -1,0 +1,2 @@
+class UserStyle < ApplicationRecord
+end
