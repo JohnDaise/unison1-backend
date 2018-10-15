@@ -1,5 +1,6 @@
 class EventsController < ApplicationController
-before_action :find_event, only: [:update, :destroy]
+  skip_before_action :authenticate, only: [:index, :create]
+  before_action :find_event, only: [:update, :destroy]
 
     def index
       render json: Event.all
@@ -7,6 +8,10 @@ before_action :find_event, only: [:update, :destroy]
 
     def show
       render json: Event.find(params[:id])
+    end
+
+    def create
+      render json: Event.create(event_params)
     end
 
     def update
@@ -19,9 +24,7 @@ before_action :find_event, only: [:update, :destroy]
     end
 
 
-    def create
-      render json: Event.create(event_params)
-    end
+
 
 
     def destroy
@@ -31,10 +34,10 @@ before_action :find_event, only: [:update, :destroy]
   private
 
     def event_params
-      params.require(:event).permit(:name, :time, :location, :notes, :user_id)
+      params.require(:event).permit(:name, :datetime, :location, :notes, :user_id)
     end
 
-    def find_song
+    def find_event
       @event = Event.find(params[:id])
     end
 
