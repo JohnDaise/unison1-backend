@@ -6,10 +6,10 @@ skip_before_action :authenticate, only: [:index, :create]
     render json: @users
   end
 
-  # def show
-  #   render json: { email: current_user.email, name: current_user.name }
-  # end
-  #
+  def show
+    render json: { email: current_user.email, name: current_user.name }
+  end
+
 
   def create
     render json: User.create(user_params)

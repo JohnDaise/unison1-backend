@@ -3,7 +3,7 @@ class ApplicationController < ActionController::API
 
   private
   def authenticate
-    token = request.headers['Authorization'].split(' ')[1]
+    token = request.headers[:Authorization].split(' ')[1]
     decoded_payload = decode_token(token)
     @current_user = User.find(decoded_payload['user_id'])
   rescue JWT::VerificationError
