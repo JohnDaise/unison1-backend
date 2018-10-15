@@ -26,7 +26,7 @@
 
 # Event
 # t.string :name
-# t.integer :time
+# t.date :datetime
 # t.string :location
 # t.string :notes
 # t.integer :user_id
@@ -51,5 +51,3 @@ bernard = User.create(name: "Bernard Purdie", email: "bernard@gmail.com", passwo
 sheila = User.create(name: "Sheila E", email: "sheila@gmail.com", password: "pw123", phone_number:"8888888888", bio: "Leading a Glamorous Life", pic_url:"")
 james = User.create(name: "James Jamerson", email: "james@gmail.com", password: "pw123", phone_number:"9999999999", bio: "Low End of the Funk Brothers", pic_url:"")
 jaco = User.create(name: "Jaco Pastorius", email: "jaco@gmail.com", password: "pw123", phone_number:"7777777777", bio: "Punk Jazz Enthusiast", pic_url: "")
-
-tribute = Event.create(name: "All Star Tribute Concert", time: 22.00, location: "The 9:30 Club  815 V St NW, Washington, DC 20001", notes:"", user_id: stevie.id)

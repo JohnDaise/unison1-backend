@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 2018_10_11_145602) do
 
   create_table "events", force: :cascade do |t|
     t.string "name"
-    t.integer "time"
+    t.date "datetime"
     t.string "location"
     t.string "notes"
     t.integer "user_id"
