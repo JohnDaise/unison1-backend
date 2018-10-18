@@ -8,7 +8,7 @@ skip_before_action :authenticate, only: [:index, :create]
   end
 
   def show
-    render json: { name: my_current_user.name, email: my_current_user.email }
+    render json: { id: my_current_user.id, name: my_current_user.name, email: my_current_user.email }
   end
 
 
