@@ -1,2 +1,0 @@
-class UserCategory < ApplicationRecord
-end

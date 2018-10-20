@@ -1,2 +1,0 @@
-class UserStylesController < ApplicationController
-end
