@@ -47,6 +47,9 @@
 # t.integer :user_id
 # t.integer :style_id
 
+
+#for user pics used 600x800 image or close to it
+
 prince = User.create(name: "Prince Rogers Nelson", email: "prince@gmail.com", password: "pw", phone_number: "612-777-9311", bio: "Kid From Minneapolis: I play guitar, bass, piano, drums and more. Literally a thousand instruments", pic_url:"https://peopledotcom.files.wordpress.com/2016/08/prince-purple-600x800.jpg")
 joni = User.create(name:"Joni Mitchell", email: "joni@gmail.com", password: "pw", phone_number: "555-555-5555", bio: "Song Bird: Guitarist and singer. I mainly play folk music, but like to experiment with jazz concepts.", pic_url:"https://last24ht.com/wp-content/uploads/2018/09/1536182524_358_Vintage-Photos-Of-Women-In-Music-Are-All-The-%E2%80%9970s-Style-Inspiration-You-Need.jpeg")
 stevie = User.create(name: "Stevie Wonder", email:"stevie@gmail.com", password: "pw", phone_number: "444-444-4444", bio: "Man with an Innervision: I play keys and some drums. I sing as well as write songs.", pic_url: "https://cdn.solacore.net/upload/2018-02-12/070a1ef2-5393-4819-93c9-c5087221ef4a.jpg")
