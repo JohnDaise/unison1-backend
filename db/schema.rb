@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 2018_10_20_145603) do
     t.string "content"
     t.string "url"
     t.integer "user_id"
+    t.integer "event_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
