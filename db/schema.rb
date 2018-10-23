@@ -25,8 +25,7 @@ ActiveRecord::Schema.define(version: 2018_10_20_145603) do
   create_table "events", force: :cascade do |t|
     t.string "name"
     t.string "location"
-    t.string "date"
-    t.integer "time"
+    t.datetime "datetime"
     t.string "notes"
     t.integer "user_id"
     t.datetime "created_at", null: false
