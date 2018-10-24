@@ -14,7 +14,7 @@ class AuthController < ApplicationController
             }
           }, status: :accepted
     else
-      render json: { message: "Invalid Email or Password" error: user.error }, status: :unauthorized
+      render json: { message: "Invalid Email or Password" }, status: :unauthorized
     end
   end
 end
