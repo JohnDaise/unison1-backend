@@ -12,7 +12,9 @@ class AuthController < ApplicationController
               name: user.name,
               email: user.email
             }
-          }, status: 200
+          }, status: :accepted
+    else
+      render json: { message: "Invalid Email or Password" error: user.error }, status: :unauthorized
     end
   end
 end
