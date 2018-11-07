@@ -1,5 +1,6 @@
 class UserEventsController < ApplicationController
-  skip_before_action :authenticate, only: [:index]
+  skip_before_action :authenticate, only: [:index, :create, :destroy]
+  before_action :find_user_event, only: [:update, :destroy]
 
   def index
     render json: UserEvent.all
